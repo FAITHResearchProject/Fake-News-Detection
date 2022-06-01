@@ -3,7 +3,8 @@ import pandas as pd
 from nltk.stem.porter import PorterStemmer
 import re
 from nltk.corpus import stopwords
-from sklearn.feature_extraction.text import CountVectorizer
+import requests
+from bs4 import BeautifulSoup as soup
 
 port_stem = PorterStemmer()
 
@@ -41,5 +42,22 @@ def manual_testing(news):
     
     return print((output_label(pred_LR[0])))
 
-news = str(input())
-manual_testing(news)
+url = str(input())
+html = requests.get(url)
+bsobj = soup(html.content, 'lxml')
+
+for link in bsobj.findAll("h1"):
+    title = link.text
+
+for news in bsobj.findAll('p'):
+    body = news.text.strip
+
+len(body)
+
+#if len(body) < 30:
+    #print('Cannot retrieve texts from this URL')
+    #exit()
+#else:
+    #news = str(title) + " " + str(body)
+
+#manual_testing(news)
