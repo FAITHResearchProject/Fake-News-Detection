@@ -17,7 +17,15 @@ Jupyter Notebook, Python, (lagay nalang dito lahat ng mga gagamitin natin na fea
 
 **Dataset(s)**
 
-++Under development
+ISOT Fake News Dataset: https://www.uvic.ca/ecs/ece/isot/datasets/fake-news/index.php
+
+Two csvs that I have used to implement the system are:
+
+“Fake1.csv”: Contains Fake News Dataset - no of records : 23481
+
+“True1.csv”: Contains Real News Dataset - no of records : 21417
+
+Total records of 44898 entries for the dataset.
 
 **Necessary Links**
 
