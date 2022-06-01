@@ -30,4 +30,4 @@ Total records of 44898 entries for the dataset.
 
 # Results and Graphs
 Confusion Matrix for CountVectorizer Pipeline
-count.png
+![](count.png)
